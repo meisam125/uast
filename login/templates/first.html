@@ -13,18 +13,61 @@
     </div>
 
     <div class="topnav">
-        <a href="#">خانه</a>
-        <a href="#">ورود</a>
-        <a href="#">درباره ما</a>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ورود</button>
     </div>
 
     <div class="column">
-        <h2>Column</h2>
-        <p>Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        تاکید بر تقسیم کار ملی در حوزه­های مهارتی آموزش عالی و تبیین نقش دانشگاه جامع علمی  کاربردی به­ عنوان یکی از مهمترین عوامل سهیم و موثر در ایجاد اشتغال و تامین نیروی انسانی میانی کشور
+توسعه ساز و کارهای ارزیابی مستمر قابلیت­های دانشگاه با همکاری بخش­های(دستگاههای اجرایی و موسسات آموزش عالی علمی کاربردی) : صنعت، خدمات ، کشاورزی ، فرهنگ وهنر با تاکید بر کارایی بیرونی  و اثربخشی
+بسط سازوکارهای بهره ­برداری از ظرفیت­های نیروی انسانی تکنولوژیست، صنعتگر و کارآفرین بخش­های : صنعت، خدمات ، کشاورزی ، فرهنگ وهنر به عنوان مدرس به­ ویژه در حوزه های عملی و مهارتی
+هدایت اجرای برنامه­ های درسی به سمت میدانی با مشارکت بخش­های صنعت، خدمات ، کشاورزی، فرهنگ وهنر
+توسعه مشارکت دانشگاه جامع علمی کاربردی با بخش غیردولتی و دولتی در طراحی و تدوین برنامه­ های درسی و آموزشی و اجرای آموزش
+توسعه فضای آموزش­های شایستگی محور و شغل­ مدار و متناسب با نیازهای شاغلین و جویندگان کار
+    
+
+        <div id="id01" class="modal">
+  
+            <form class="modal-content animate" action="" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="{% static '/img_avatar2.png' %}" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <label for="uname"><b>نام کاربری</b></label>
+                <input type="text" placeholder="نام کاربری" name="uname" required>
+          
+                <label for="psw"><b>رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور" name="psw" required>
+                  
+                <button type="submit">ورود</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> مرا به خاطر بسپار
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">لغو</button>
+                <span class="psw">فراموشی <a href="#">رمز?</a></span>
+              </div>
+            </form>
+          </div>
+          
+          <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+          
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+          </script>
     </div>
 
-    <div class="footer">
-        <p>Footer</p>
+    <div class="footer1">
+        <p>شرکت وندا توسعه امید</p>
     </div>
 
 </body>
