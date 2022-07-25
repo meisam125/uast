@@ -13,7 +13,9 @@
     </div>
 
     <div class="topnav">
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ورود</button>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">مدیریت دانشجویان قبل از 90</button>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">سامانه کارورزی</button>
+        <button onclick="" style="width:auto;">همکاران واحد استان</button>
     </div>
 
     <div class="column">
@@ -31,6 +33,8 @@
               <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <img src="{% static '/img_avatar2.png' %}" alt="Avatar" class="avatar">
+                <br>
+                ورود به سامانه بایگانی دانشجویان قبل از 90
               </div>
           
               <div class="container">
@@ -38,8 +42,8 @@
                 <input type="text" placeholder="نام کاربری" name="uname" required>
           
                 <label for="psw"><b>رمز عبور</b></label>
-                <input type="password" placeholder="رمز عبور" name="psw" required>
-                  
+                <input type="password" placeholder="رمز عبور" name="psw" id="psw" required>
+                <input type="checkbox" onclick="myFunction()">نمایش رمز
                 <button type="submit">ورود</button>
                 <label>
                   <input type="checkbox" checked="checked" name="remember"> مرا به خاطر بسپار
@@ -56,15 +60,83 @@
           <script>
           // Get the modal
           var modal = document.getElementById('id01');
+          var modal2 = document.getElementById('id02');
           
           // When the user clicks anywhere outside of the modal, close it
           window.onclick = function(event) {
               if (event.target == modal) {
                   modal.style.display = "none";
               }
+            }
+          window.onclick = function(event) {
+              if (event.target == modal2) {
+                  modal2.style.display = "none";
+              }
+          }
+
+          function myFunction() {
+             var x = document.getElementById("psw");
+             if (x.type == "password") {
+                  x.type = "text";
+             } else {
+                     x.type = "password";
+             }
+          }
+          function myFunction1() {
+             var x = document.getElementById("kpsw");
+             if (x.type == "password") {
+                  x.type = "text";
+             } else {
+                     x.type = "password";
+             }
           }
           </script>
     </div>
+
+    <div id="id02" class="modal">
+  
+      <form class="modal-content animate" action="" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="{% static '/img_avatar2.png' %}" alt="Avatar" class="avatar">
+          <br>
+          ورود به سامانه کارورزی استان لرستان
+        </div>
+    
+        <div class="container">
+          <label for="ukname"><b>نام کاربری</b></label>
+          <input type="text" placeholder="نام کاربری" name="ukname" required>
+    
+          <label for="kpsw"><b>رمز عبور</b></label>
+          <input type="password" placeholder="رمز عبور" name="kpsw" id="kpsw" required>
+          <input type="checkbox" onclick="myFunction1()">نمایش رمز
+            
+          <button type="submit">ورود</button>
+          <label>
+            <input type="checkbox" checked="checked" name="kremember"> مرا به خاطر بسپار
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">لغو</button>
+          <span class="psw">فراموشی <a href="#">رمز?</a></span>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+</div>
+
 
     <div class="footer1">
         <p>شرکت وندا توسعه امید</p>
